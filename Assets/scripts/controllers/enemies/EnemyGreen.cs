@@ -8,25 +8,22 @@ public class EnemyGreen : BaseEnemy {
 
 	// Use this for initialization
 	void Start () {
+		base.Start ();
 		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		base.Update ();
 	}
 
 	protected override void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Bullet") {
+		if (!animator.GetBool ("haveHit") && coll.gameObject.tag == "Bullet") {
+			Animator animator = GetComponent<Animator> ();
+			animator.SetBool ("haveHit", true);
 			Destroy (coll.gameObject);
-			if (!animator.GetBool ("haveHit")) {
-				Animator animator = GetComponent<Animator> ();
-				animator.SetBool ("haveHit", true);
-			} else {
-				int point = ScoreModal.getInstance ().getPoint ();
-				ScoreModal.getInstance ().setPoint (this.point + point);
-				Destroy (gameObject);
-			}
+		} else {
+			base.OnCollisionEnter2D (coll);
 		}
 	}
 }

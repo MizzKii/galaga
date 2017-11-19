@@ -15,7 +15,7 @@ public class UIReady : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		stateModal = StateModal.getInstance ();
+		stateModal = StateModal.GetInstance ();
 
 		Vector2 size = new Vector2 (400, 100);
 		float centerX = (Screen.width / 2) - (size.x / 2);

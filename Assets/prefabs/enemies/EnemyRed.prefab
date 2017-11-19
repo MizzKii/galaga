@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!212 &212512378683664682
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4789624985835114}
+  - component: {fileID: 114142880299821354}
   m_Layer: 0
   m_Name: EnemyWave
   m_TagString: Untagged
@@ -3254,6 +3255,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 100
+--- !u!114 &114142880299821354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1032117983442586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536c1a1eeaba2475582c23b03061113f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAttractRange: 0.5
+  maxAttractRange: 2
 --- !u!114 &114145104040124504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3302,6 +3316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114240083337493750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3314,6 +3329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114299384841429008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3362,6 +3378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114452022638539002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3374,6 +3391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114496655778621704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3410,6 +3428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114518426168779716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3434,6 +3453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114557654909604914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3458,6 +3478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114601708515523690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3470,6 +3491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114613632072030574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3506,6 +3528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114692394177528478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3518,6 +3541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114735046226223646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3578,6 +3602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114779982961777602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3626,6 +3651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114894209378541152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3650,6 +3676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114913827194346144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3686,6 +3713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114968031292288844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3698,6 +3726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114968839697261790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3710,6 +3739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 200
+  bullet: {fileID: 1478317918450724, guid: cfe52919752b44186b1082c4b9f65bba, type: 2}
 --- !u!114 &114977475785772152
 MonoBehaviour:
   m_ObjectHideFlags: 1

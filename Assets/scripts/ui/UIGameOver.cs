@@ -31,8 +31,8 @@ public class UIGameOver : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		stateModal = StateModal.getInstance ();
-		scoreModal = ScoreModal.getInstance ();
+		stateModal = StateModal.GetInstance ();
+		scoreModal = ScoreModal.GetInstance ();
 
 		Vector2 size = new Vector2 (500, 50);
 		float centerX = (Screen.width / 2) - (size.x / 2);

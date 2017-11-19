@@ -6,7 +6,7 @@ public class ScoreModal {
 
 	static ScoreModal scoreModal = null;
 
-	static public ScoreModal getInstance () {
+	static public ScoreModal GetInstance () {
 		if (scoreModal == null) {
 			scoreModal = new ScoreModal ();
 		}

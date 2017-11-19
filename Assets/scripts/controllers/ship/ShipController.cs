@@ -12,14 +12,32 @@ public class ShipController : MonoBehaviour {
 	float translateLimitX;
 	float halfWidth = 0.5f;
 
+	GamePlay gamePlay;
+	bool isDmg = false;
+
 	// Use this for initialization
 	void Start () {
 		translateLimitX = new CameraUtil ().getCameraWidth () - halfWidth;
+
+		Invoke ("ShipReady", 1f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		HandleInput ();
+	}
+
+	void OnTriggerEnter2D(Collider2D coll) {
+		if (coll.gameObject.tag == "Enemy" && isDmg) {
+			if (gamePlay != null) {
+				gamePlay.ShipDestory ();
+			}
+			Destroy (gameObject);
+		}
+	}
+
+	void ShipReady () {
+		isDmg = true;
 	}
 
 	// Handle input
@@ -36,7 +54,7 @@ public class ShipController : MonoBehaviour {
 
 	// Ship control
 	void Move (Vector3 direction) {
-		transform.Translate (getForce (direction), Space.World);
+		transform.Translate (GetForce (direction), Space.World);
 	}
 
 	// Shoot bullet
@@ -44,12 +62,16 @@ public class ShipController : MonoBehaviour {
 		GameObject.Instantiate (bullet, transform.position, bullet.transform.rotation);
 	}
 
-	Vector3 getForce (Vector3 direction) {
+	Vector3 GetForce (Vector3 direction) {
 		float force = Time.deltaTime * speed;
 		float posX = transform.position.x + (direction.x * force);
 		if (posX < -translateLimitX || posX > translateLimitX) {
 			return Vector3.zero;
 		}
 		return direction * force;
+	}
+
+	public void SetGamePlay (GamePlay gamePlay) {
+		this.gamePlay = gamePlay;
 	}
 }

@@ -715,6 +715,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 1314657064248606, guid: 957cbb96b5c01454597dfe890cdfa9f0, type: 2}
   enemyWave: {fileID: 1032117983442586, guid: d31e857f5bbd54b84a0b7b4e19aa4c0f, type: 2}
+  player1Life: 3
+  enemiesSpeed: 2
+  enemiesSpeedUp: 0.5
 --- !u!4 &1794566983
 Transform:
   m_ObjectHideFlags: 0

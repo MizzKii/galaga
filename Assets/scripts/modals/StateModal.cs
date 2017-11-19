@@ -6,7 +6,7 @@ public class StateModal {
 
 	static StateModal stateModal = null;
 
-	public static StateModal getInstance () {
+	public static StateModal GetInstance () {
 		if (stateModal == null) {
 			stateModal = new StateModal ();
 		}

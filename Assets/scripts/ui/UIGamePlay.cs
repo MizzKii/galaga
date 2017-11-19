@@ -25,6 +25,7 @@ public class UIGamePlay : MonoBehaviour {
 
 	StateModal stateModal;
 	ScoreModal scoreModal;
+	Player1Modal player1Modal;
 
 	Vector2 shipSize;
 	Rect highRec;
@@ -34,12 +35,11 @@ public class UIGamePlay : MonoBehaviour {
 	Rect player1ScoreRec;
 	List<Rect> player1LifeRec;
 
-	int lift = 2;
-
 	// Use this for initialization
 	void Start () {
-		stateModal = StateModal.getInstance ();
-		scoreModal = ScoreModal.getInstance ();
+		stateModal = StateModal.GetInstance ();
+		scoreModal = ScoreModal.GetInstance ();
+		player1Modal = Player1Modal.GetInstance ();
 
 		shipSize = new Vector2 (30, 30);
 		Vector2 size = new Vector2 (120, lineHeight);
@@ -58,14 +58,15 @@ public class UIGamePlay : MonoBehaviour {
 		player1ScoreRec = new Rect (new Vector2 (posX, posY), size);
 		posY += lineHeight * 2;
 		player1LifeRec = new List<Rect> ();
-		AddShipRects (lift, new Vector2 (posX, posY));
+		AddShipRects (2, new Vector2 (posX, posY));
 	}
 
 	void OnGUI () {
 		if (stateModal.getState () == GameState.play) {
 			int p1RecCount = player1LifeRec.Count;
-			if (lift > p1RecCount) {
-				AddShipRects (lift - p1RecCount);
+			int life = player1Modal.GetLife () - 1;
+			if (life > p1RecCount) {
+				AddShipRects (life - p1RecCount);
 			}
 			GUI.skin = skinDefault;
 			GUI.Label (highRec, high, fontLeftStyle);
@@ -73,7 +74,7 @@ public class UIGamePlay : MonoBehaviour {
 			GUI.Label (highScoreRec, "0", scoreStyle);
 			GUI.Label (player1Rec, player1, fontLeftStyle);
 			GUI.Label (player1ScoreRec, scoreModal.getPoint ().ToString (), scoreStyle);
-			for (int i = 0; i < player1LifeRec.Count; i++) {
+			for (int i = 0; i < life; i++) {
 				GUI.DrawTexture (player1LifeRec[i], ship);
 			}
 		}
