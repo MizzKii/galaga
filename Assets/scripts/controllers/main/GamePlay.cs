@@ -20,6 +20,7 @@ public class GamePlay : MonoBehaviour {
 	Player1Modal player1Modal;
 
 	float startSpeed;
+	bool canRestart = false;
 	GameObject wave;
 
 	// Use this for initialization
@@ -52,7 +53,7 @@ public class GamePlay : MonoBehaviour {
 	}
 
 	void HandleGameOver () {
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (canRestart && Input.GetKeyDown (KeyCode.Space)) {
 			stateModal.setState (GameState.ready);
 			player1Modal.SetLife (player1Life);
 			scoreModal.SetPoint (0);
@@ -74,6 +75,10 @@ public class GamePlay : MonoBehaviour {
 		}
 	}
 
+	void SetRestart () {
+		canRestart = true;
+	}
+
 	public void InstantiateWave () {
 		wave = GameObject.Instantiate (enemyWave);
 		EnemyWave script = wave.GetComponent<EnemyWave> ();
@@ -90,12 +95,14 @@ public class GamePlay : MonoBehaviour {
 			InstantiateShip ();
 		} else {
 			Destroy (wave);
+			canRestart = false;
 			stateModal.setState (GameState.over);
 			int score = scoreModal.GetPoint ();
 			int hightScore = scoreModal.GetHightScore ();
 			if (score > hightScore) {
 				scoreModal.SetHightScore (score);
 			}
+			Invoke ("SetRestart", 1.5f);
 		}
 	}
 }
