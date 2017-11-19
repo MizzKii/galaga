@@ -14,6 +14,7 @@ public class ShipController : MonoBehaviour {
 
 	GamePlay gamePlay;
 	bool isDmg = false;
+	bool isDestory = false;
 
 	// Use this for initialization
 	void Start () {
@@ -24,16 +25,31 @@ public class ShipController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		HandleInput ();
+		if (!isDestory) {
+			HandleInput ();
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject.tag == "Enemy" && isDmg) {
-			if (gamePlay != null) {
-				gamePlay.ShipDestory ();
+			isDestory = true;
+			Animator animator = GetComponent<Animator> ();
+			if (animator == null) {
+				print ("test");
+				ShipDestory ();
+				return;
+			} else {
+				animator.SetTrigger ("Destory");
+				Invoke ("ShipDestory", 0.29f);
 			}
-			Destroy (gameObject);
 		}
+	}
+
+	void ShipDestory () {
+		if (gamePlay != null) {
+			gamePlay.ShipDestory ();
+		}
+		Destroy (gameObject);
 	}
 
 	void ShipReady () {

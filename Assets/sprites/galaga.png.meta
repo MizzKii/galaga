@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 433f549476bf140bd99a8edf2134fd7b
-timeCreated: 1511100846
+timeCreated: 1511106085
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -25,6 +25,10 @@ TextureImporter:
     21300036: beam_1
     21300038: beam_2
     21300040: beam_3
+    21300042: boom_1
+    21300044: boom_2
+    21300046: boom_3
+    21300048: boom_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -386,7 +390,7 @@ TextureImporter:
         width: 48
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -400,7 +404,7 @@ TextureImporter:
         width: 48
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,7 +418,63 @@ TextureImporter:
         width: 48
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: boom_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 303
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: boom_2
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 303
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: boom_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 303
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: boom_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 303
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
