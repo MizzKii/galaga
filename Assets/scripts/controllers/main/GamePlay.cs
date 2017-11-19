@@ -55,7 +55,7 @@ public class GamePlay : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			stateModal.setState (GameState.ready);
 			player1Modal.SetLife (player1Life);
-			scoreModal.setPoint (0);
+			scoreModal.SetPoint (0);
 			enemiesSpeed = startSpeed;
 			Invoke ("GameStart", 3f);
 		}
@@ -91,6 +91,11 @@ public class GamePlay : MonoBehaviour {
 		} else {
 			Destroy (wave);
 			stateModal.setState (GameState.over);
+			int score = scoreModal.GetPoint ();
+			int hightScore = scoreModal.GetHightScore ();
+			if (score > hightScore) {
+				scoreModal.SetHightScore (score);
+			}
 		}
 	}
 }

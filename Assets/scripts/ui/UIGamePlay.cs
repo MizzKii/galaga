@@ -71,9 +71,9 @@ public class UIGamePlay : MonoBehaviour {
 			GUI.skin = skinDefault;
 			GUI.Label (highRec, high, fontLeftStyle);
 			GUI.Label (scoreRec, score, fontRightStyle);
-			GUI.Label (highScoreRec, "0", scoreStyle);
+			GUI.Label (highScoreRec, scoreModal.GetHightScore ().ToString (), scoreStyle);
 			GUI.Label (player1Rec, player1, fontLeftStyle);
-			GUI.Label (player1ScoreRec, scoreModal.getPoint ().ToString (), scoreStyle);
+			GUI.Label (player1ScoreRec, scoreModal.GetPoint ().ToString (), scoreStyle);
 			for (int i = 0; i < life; i++) {
 				GUI.DrawTexture (player1LifeRec[i], ship);
 			}

@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 300
+  beam: {fileID: 1668814010634142, guid: c99a5c3261a164c7db0801318beeaaee, type: 2}
 --- !u!212 &212520687200217202
 SpriteRenderer:
   m_ObjectHideFlags: 1

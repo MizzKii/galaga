@@ -37,8 +37,8 @@ public class BaseEnemy : MonoBehaviour {
 
 	protected virtual void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Bullet") {
-			int point = ScoreModal.GetInstance ().getPoint ();
-			ScoreModal.GetInstance ().setPoint (this.point + point);
+			int point = ScoreModal.GetInstance ().GetPoint ();
+			ScoreModal.GetInstance ().SetPoint (this.point + point);
 			CallEnemyWave ();
 			Destroy (coll.gameObject);
 			Destroy (gameObject);

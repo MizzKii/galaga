@@ -50,9 +50,9 @@ public class UIGameOver : MonoBehaviour {
 			GUI.skin = skinDefault;
 			GUI.Label (gameOverRec, gameOver, titleStyle);
 			GUI.Label (hightScoreRec, hightScore);
-			GUI.Label (hightScorePointRec, "0", fontWhiteStyle);
+			GUI.Label (hightScorePointRec, scoreModal.GetHightScore ().ToString (), fontWhiteStyle);
 			GUI.Label (scoreRec, score);
-			GUI.Label (scorePointRec, scoreModal.getPoint ().ToString (), fontWhiteStyle);
+			GUI.Label (scorePointRec, scoreModal.GetPoint ().ToString (), fontWhiteStyle);
 			GUI.Label (playAgainRec, playAgain, fontWhiteStyle);
 		}
 	}

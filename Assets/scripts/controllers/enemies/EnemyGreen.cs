@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class EnemyGreen : BaseEnemy {
 
+	[SerializeField]
+	GameObject beam;
+
 	Animator animator;
+	bool isStop = false;
+	bool isBeam = false;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +19,26 @@ public class EnemyGreen : BaseEnemy {
 	
 	// Update is called once per frame
 	void Update () {
-		base.Update ();
+		if (!isStop) {
+			base.Update ();
+		}
+	}
+
+	public override void Attack () {
+		if (!this.isAttacking) {
+			isBeam = false;
+			isStop = false;
+		}
+		base.Attack ();
+	}
+
+	protected override void OnAttacking () {
+		base.OnAttacking ();
+		if (!isBeam && transform.position.y < -2) {
+			isStop = true;
+			GameObject.Instantiate (beam, transform);
+			Invoke ("HaveBeam", 3f);
+		}
 	}
 
 	protected override void OnCollisionEnter2D(Collision2D coll) {
@@ -25,5 +49,10 @@ public class EnemyGreen : BaseEnemy {
 		} else {
 			base.OnCollisionEnter2D (coll);
 		}
+	}
+
+	void HaveBeam () {
+		this.isBeam = true;
+		isStop = false;
 	}
 }

@@ -3266,8 +3266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536c1a1eeaba2475582c23b03061113f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minAttractRange: 0.5
-  maxAttractRange: 2
+  minAttractRange: 1
+  maxAttractRange: 3
 --- !u!114 &114145104040124504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3416,6 +3416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 300
+  beam: {fileID: 1668814010634142, guid: c99a5c3261a164c7db0801318beeaaee, type: 2}
 --- !u!114 &114515392144401020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3566,6 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 300
+  beam: {fileID: 1668814010634142, guid: c99a5c3261a164c7db0801318beeaaee, type: 2}
 --- !u!114 &114747757629646438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3578,6 +3580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 300
+  beam: {fileID: 1668814010634142, guid: c99a5c3261a164c7db0801318beeaaee, type: 2}
 --- !u!114 &114767121337138034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3701,6 +3704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 300
+  beam: {fileID: 1668814010634142, guid: c99a5c3261a164c7db0801318beeaaee, type: 2}
 --- !u!114 &114960080210940938
 MonoBehaviour:
   m_ObjectHideFlags: 1

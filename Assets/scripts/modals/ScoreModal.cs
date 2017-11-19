@@ -14,14 +14,26 @@ public class ScoreModal {
 	}
 
 	int point = 0;
+	int hightScore = 0;
 
-	private ScoreModal () {}
+	private ScoreModal () {
+		hightScore = PlayerPrefs.GetInt ("HightScore", 0);
+	}
 
-	public int getPoint () {
+	public int GetPoint () {
 		return point;
 	}
 
-	public void setPoint (int point) {
+	public void SetPoint (int point) {
 		this.point = point;
+	}
+
+	public int GetHightScore () {
+		return hightScore;
+	}
+
+	public void SetHightScore (int hightScore) {
+		PlayerPrefs.SetInt ("HightScore", hightScore);
+		this.hightScore = hightScore;
 	}
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 433f549476bf140bd99a8edf2134fd7b
-timeCreated: 1511094407
+timeCreated: 1511100846
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -22,6 +22,9 @@ TextureImporter:
     21300030: enemy1_15
     21300032: enemy1_16
     21300034: galaga_8
+    21300036: beam_1
+    21300038: beam_2
+    21300040: beam_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -368,6 +371,48 @@ TextureImporter:
         y: 180
         width: 3
         height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beam_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 199
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beam_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 199
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: beam_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 199
+        width: 48
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
